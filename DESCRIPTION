@@ -7,3 +7,4 @@ Authors@R: c(person("Zuguang", "Gu", role = c("cre", "aut"),
 License: Artistic-2.0
 Depends: R (>= 4.0.0), minfi
 NeedsCompilation: no
+LazyData: yes
