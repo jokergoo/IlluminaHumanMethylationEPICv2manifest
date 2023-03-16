@@ -1,0 +1,9 @@
+Package: IlluminaHumanMethylationEPICv2manifest
+Version: 0.99.0
+Title: Manifest for Illumina's EPIC v2 methylation arrays
+Description: A manifest package for Illumina's EPIC v2 methylation arrays.
+Authors@R: c(person("Zuguang", "Gu", role = c("cre", "aut"),
+                    email = "z.gu@dkfz.de"))
+License: Artistic-2.0
+Depends: R (>= 4.0.0), minfi
+NeedsCompilation: no

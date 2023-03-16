@@ -1,0 +1,15 @@
+\name{IlluminaHumanMethylationEPICv2manifest}
+\docType{data}
+\alias{IlluminaHumanMethylationEPICv2manifest}
+\title{
+IlluminaHumanMethylationEPICv2manifest
+}
+\description{
+IlluminaHumanMethylationEPICv2manifest
+}
+\usage{
+data(IlluminaHumanMethylationEPICv2manifest)
+}
+\details{
+    bla
+}
