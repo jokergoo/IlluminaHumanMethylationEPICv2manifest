@@ -1,0 +1,10 @@
+Meta
+.Rproj.user
+.Rhistory
+.RData
+.DS_Store
+*.o
+*.so
+bk
+vignettes_not_run/figure
+test_not_run
