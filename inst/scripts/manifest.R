@@ -47,4 +47,4 @@ stopifnot(validObject(IlluminaHumanMethylationEPICv2manifest))
 save(IlluminaHumanMethylationEPICv2manifest, compress = "xz",
      file = "/Users/guz/workspace/hirschsprung_multiomics/IlluminaHumanMethylationEPICv2manifest/data/IlluminaHumanMethylationEPICv2manifest.rda")
 sessionInfo()
-rm(list = ls())
+

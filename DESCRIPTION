@@ -3,9 +3,10 @@ Version: 0.99.0
 Date: 2023-03-16
 Title: Manifest for Illumina's EPIC v2.0 methylation arrays
 Description: A manifest package for Illumina's EPIC v2.0 methylation arrays.
-Authors@R: c(person("Zuguang", "Gu", role = c("cre", "aut"),
-                    email = "z.gu@dkfz.de"))
+Authors@R: person("Zuguang", "Gu", email = "z.gu@dkfz.de", role = c("aut", "cre"),
+                  comment = c('ORCID'="0000-0002-7395-8709"))
 License: Artistic-2.0
-Depends: R (>= 4.0.0), minfi
-LazyData: yes
-LazyDataCompression:xz
+Depends: R (>= 4.0.0), minfi, utils
+Suggests: knitr
+VignetteBuilder: knitr
+biocViews: IlluminaChip, Homo_sapiens, DNAMethylation
