@@ -1,0 +1,30 @@
+---
+title: "Use of IlluminaHumanMethylationEPICv2manifest"
+author: "Zuguang Gu (z.gu@dkfz.de)"
+date: '`r Sys.Date()`'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Use of IlluminaHumanMethylationEPICv2manifest}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+This package provides manifest annotation for Illumina methylation EPIC array v2.0. The data is based on the file https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/methylationepic/MethylationEPIC%20v2%20Files.zip from 
+  https://support.illumina.com/array/array_kits/infinium-methylationepic-beadchip-kit/downloads.html.
+
+A script for creating the data object in this package is contained in
+  `system.files("scripts", "manifest.R", package = "IlluminaHumanMethylationEPICv2manifest")`, which is slightly adjusted from the 
+ original script in the **IlluminaHumanMethylationEPICmanifest** package.
+
+
+When using with the **minfi** package, you can manually set the "array" element by providing the "prefix" (removing the string "manifest"):
+
+```{r, eval = FALSE}
+RGset = read.metharray.exp(...)
+annotation(RGset)["array"] = "IlluminaHumanMethylationEPICv2"
+```
+
+```{r, echo = FALSE}
+sessionInfo()
+```

@@ -15,7 +15,7 @@
 
   A script for creating the data object in this package is contained in
   \code{system.files("scripts", "manifest.R", package = "IlluminaHumanMethylationEPICv2manifest")}, which is slightly adjusted from the 
-  script in the "IlluminaHumanMethylationEPICmanifest" package.
+  original script in the "IlluminaHumanMethylationEPICmanifest" package.
 }
 \format{
   An object of class \code{IlluminaMethylationManifest}
