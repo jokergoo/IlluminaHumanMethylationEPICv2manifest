@@ -10,13 +10,22 @@ vignette: >
 ---
 
 
-This package provides manifest annotation for Illumina methylation EPIC array v2.0. The data is based on the file https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/methylationepic/MethylationEPIC%20v2%20Files.zip from 
+```{r, echo = FALSE, message = FALSE}
+library(knitr)
+knitr::opts_chunk$set(
+    error = FALSE,
+    tidy  = FALSE,
+    message = FALSE,
+    warning = FALSE,
+    fig.align = "center")
+```
+
+This package provides manifest for Illumina methylation EPIC array v2.0. The data is based on the file https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/methylationepic/MethylationEPIC%20v2%20Files.zip from 
   https://support.illumina.com/array/array_kits/infinium-methylationepic-beadchip-kit/downloads.html.
 
 A script for creating the data object in this package is contained in
   `system.files("scripts", "manifest.R", package = "IlluminaHumanMethylationEPICv2manifest")`, which is slightly adjusted from the 
  original script in the **IlluminaHumanMethylationEPICmanifest** package.
-
 
 When using with the **minfi** package, you can manually set the `"array"` element by providing the prefix (removing the string "manifest"):
 
@@ -28,6 +37,34 @@ annotation(RGset)["array"] = "IlluminaHumanMethylationEPICv2"
 # explained in the IlluminaHumanMethylationEPICv2anno.ilm20a1.hg38 package
 annotation(RGset)["annotation"] = "ilm20a1.hg38"
 ```
+
+The following code compares the probes in **IlluminaHumanMethylationEPICv2manifest** and **IlluminaHumanMethylationEPICmanifest**.
+
+```{r}
+library(IlluminaHumanMethylationEPICmanifest)
+library(IlluminaHumanMethylationEPICv2manifest)
+
+probe1 = getManifestInfo(IlluminaHumanMethylationEPICmanifest, "locusNames")
+probe2 = getManifestInfo(IlluminaHumanMethylationEPICv2manifest, "locusNames")
+
+probe1 = unique(probe1)
+probe2 = unique(probe2)
+```
+
+Number of probes:
+
+```{r}
+length(probe1)
+length(probe2)
+```
+
+Overlap of probes:
+
+```{r}
+library(eulerr)
+plot(euler(list(v1 = probe1, v2 = probe2)), quantities = TRUE)
+```
+
 
 ```{r, echo = FALSE}
 sessionInfo()

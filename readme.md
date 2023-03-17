@@ -2,7 +2,7 @@ IlluminaHumanMethylationEPICv2manifest
 --------------------------------------
 
 
-This package provides manifest annotation for Illumina methylation EPIC array v2.0. The data is based on the file https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/methylationepic/MethylationEPIC%20v2%20Files.zip from 
+This package provides manifest for Illumina methylation EPIC array v2.0. The data is based on the file https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/methylationepic/MethylationEPIC%20v2%20Files.zip from 
   https://support.illumina.com/array/array_kits/infinium-methylationepic-beadchip-kit/downloads.html.
 
 A script for creating the data object in this package is contained in

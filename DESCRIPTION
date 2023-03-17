@@ -8,6 +8,6 @@ Authors@R: person("Zuguang", "Gu", email = "z.gu@dkfz.de", role = c("aut", "cre"
 License: Artistic-2.0
 Depends: R (>= 4.0.0), minfi
 Imports: utils
-Suggests: knitr
+Suggests: knitr, IlluminaHumanMethylationEPICmanifest, eulerr
 VignetteBuilder: knitr
 biocViews: IlluminaChip, Homo_sapiens, DNAMethylation
