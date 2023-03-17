@@ -3,7 +3,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 bk
-load.R
 test_not_run
 vignettes_not_run
 run_all_jobs.R
