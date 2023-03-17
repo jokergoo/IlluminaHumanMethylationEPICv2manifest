@@ -34,8 +34,8 @@ RGset = read.metharray.exp(...)
 
 annotation(RGset)["array"] = "IlluminaHumanMethylationEPICv2"
 
-# explained in the IlluminaHumanMethylationEPICv2anno.ilm20a1.hg38 package
-annotation(RGset)["annotation"] = "ilm20a1.hg38"
+# explained in the IlluminaHumanMethylationEPICv2anno.20a1.hg38 package
+annotation(RGset)["annotation"] = "20a1.hg38"
 ```
 
 The following code compares the probes in **IlluminaHumanMethylationEPICv2manifest** and **IlluminaHumanMethylationEPICmanifest**.

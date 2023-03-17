@@ -6,3 +6,4 @@
     assign("IlluminaHumanMethylationEPICv2manifest", IlluminaHumanMethylationEPICv2manifest, envir = ns)
     namespaceExport(ns, "IlluminaHumanMethylationEPICv2manifest")
 }
+
