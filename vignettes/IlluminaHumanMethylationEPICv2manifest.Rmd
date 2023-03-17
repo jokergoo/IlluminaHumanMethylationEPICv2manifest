@@ -18,7 +18,7 @@ A script for creating the data object in this package is contained in
  original script in the **IlluminaHumanMethylationEPICmanifest** package.
 
 
-When using with the **minfi** package, you can manually set the "array" element by providing the "prefix" (removing the string "manifest"):
+When using with the **minfi** package, you can manually set the `"array"` element by providing the prefix (removing the string "manifest"):
 
 ```{r, eval = FALSE}
 RGset = read.metharray.exp(...)
