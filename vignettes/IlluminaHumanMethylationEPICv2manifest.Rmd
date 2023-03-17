@@ -22,7 +22,11 @@ When using with the **minfi** package, you can manually set the "array" element 
 
 ```{r, eval = FALSE}
 RGset = read.metharray.exp(...)
+
 annotation(RGset)["array"] = "IlluminaHumanMethylationEPICv2"
+
+# explained in the IlluminaHumanMethylationEPICv2anno.ilm20a1.hg38 package
+annotation(RGset)["annotation"] = "ilm20a1.hg38"
 ```
 
 ```{r, echo = FALSE}

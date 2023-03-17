@@ -15,3 +15,5 @@ logo
 ^pkgdown$
 build_pkg_site.R
 ^\.github$
+.DS_Store
+
