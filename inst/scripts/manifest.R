@@ -8,7 +8,9 @@ manifestFile <- "../data_EPIC_v2/EPIC-8v2-0_A1.csv"
 stopifnot(file.exists(manifestFile))
 maniTmp <- minfi:::read.manifest.EPIC(manifestFile)
 
-## Checking
+
+
+## Checking start
 manifest <- maniTmp$manifest
 address.all <- c(manifest$AddressA, manifest$AddressB)
 sum(address.all == "")
@@ -32,6 +34,10 @@ table(tmp$Methyl450_Loci)
 
 ## Controls ok
 all(maniTmp$controls[,1] %in% address.epic)
+## Checking done
+
+
+
 
 ## Manifest package
 maniList <- maniTmp$manifestList
