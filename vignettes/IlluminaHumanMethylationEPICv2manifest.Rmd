@@ -17,6 +17,8 @@ knitr::opts_chunk$set(
     tidy  = FALSE,
     message = FALSE,
     warning = FALSE,
+    fig.width = 6,
+    fig.height = 6,
     fig.align = "center")
 ```
 
@@ -65,7 +67,34 @@ Overlap of probes:
 
 ```{r, fig.width = 6, fig.height = 6}
 library(eulerr)
-plot(euler(list(v1 = probe1, v2 = probe2)), quantities = TRUE)
+plot(euler(list(v1 = probe1, v2 = probe2)), quantities = TRUE,
+    main = "Compare total probes in the two arrays")
+```
+
+We can also compare Type I and Type II probes in the two arrays.
+
+```{r}
+TypeI_1 = IlluminaHumanMethylationEPICmanifest@data$TypeI
+TypeI_2 = IlluminaHumanMethylationEPICv2manifest@data$TypeI
+plot(euler(list(v1_TypeI = unique(TypeI_1$Name), v2_TypeI = unique(TypeI_2$Name))), 
+    quantities = TRUE, main = "Compare TypeI probes in the two arrays")
+
+TypeII_1 = IlluminaHumanMethylationEPICmanifest@data$TypeII
+TypeII_2 = IlluminaHumanMethylationEPICv2manifest@data$TypeII
+plot(euler(list(v1_TypeII = unique(TypeII_1$Name), v2_TypeII = unique(TypeII_2$Name))), 
+    quantities = TRUE, main = "Compare TypeII probes in the two arrays")
+```
+
+The next plot shows physical locations of TypeII probes on the array are not correlated in the two arrays.
+
+```{r, fig.width = 7, fig.height = 7}
+x1 = as.numeric(TypeII_1$AddressA); names(x1) = TypeII_1$Name
+x2 = as.numeric(TypeII_2$AddressA); names(x2) = TypeII_2$Name
+cn = intersect(names(x1), names(x2))
+x1 = x1[cn]
+x2 = x2[cn]
+plot(x1, x2, pch = ".", xlab = "EPIC array v1.0", ylab = "EPIC array v2.0",
+    main = "Addresses of same probes in the two arrays")
 ```
 
 ## What if using the wrong array version?
