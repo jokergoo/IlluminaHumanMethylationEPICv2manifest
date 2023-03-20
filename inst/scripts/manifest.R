@@ -1,6 +1,10 @@
 
 setwd("/Users/guz/project/development/IlluminaHumanMethylationEPICv2manifest")
 
+if(basename(getwd()) != "IlluminaHumanMethylationEPICv2manifest") {
+     stop("Working dir should be 'IlluminaHumanMethylationEPICv2manifest' (in the package dir).")
+}
+
 library(minfi)
 
 ## Needs to be uncompressed

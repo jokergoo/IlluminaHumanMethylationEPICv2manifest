@@ -20,3 +20,17 @@ annotation(RGset)["array"] = "IlluminaHumanMethylationEPICv2"
 # explained in the IlluminaHumanMethylationEPICv2anno.20a1.hg38 package
 annotation(RGset)["annotation"] = "20a1.hg38"
 ```
+
+
+## Install
+
+```r
+BiocManager::install("jokergoo/IlluminaHumanMethylationEPICv2manifest")
+# or
+remotes::install_github("jokergoo/IlluminaHumanMethylationEPICv2manifest")
+```
+
+
+## Licence
+
+Artistic-2.0
