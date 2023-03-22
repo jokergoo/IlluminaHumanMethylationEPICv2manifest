@@ -11,7 +11,7 @@ library(minfi)
 manifestFile <- "../data_EPIC_v2/EPIC-8v2-0_A1.csv"
 stopifnot(file.exists(manifestFile))
 
-source("read.manifest.EPIC.R")
+source("inst/scripts/read.manifest.EPIC.R")
 maniTmp <- read.manifest.EPIC(manifestFile)
 
 
