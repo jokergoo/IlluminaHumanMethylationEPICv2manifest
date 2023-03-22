@@ -1,5 +1,5 @@
 Package: IlluminaHumanMethylationEPICv2manifest
-Version: 0.99.0
+Version: 0.99.1
 Date: 2023-03-16
 Title: Manifest for Illumina's EPIC v2.0 methylation arrays
 Description: A manifest package for Illumina's EPIC v2.0 methylation arrays. The version

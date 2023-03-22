@@ -10,7 +10,9 @@ library(minfi)
 ## Needs to be uncompressed
 manifestFile <- "../data_EPIC_v2/EPIC-8v2-0_A1.csv"
 stopifnot(file.exists(manifestFile))
-maniTmp <- minfi:::read.manifest.EPIC(manifestFile)
+
+source("read.manifest.EPIC.R")
+maniTmp <- read.manifest.EPIC(manifestFile)
 
 
 
